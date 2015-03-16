@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="me.ezeezegg.androidsocialnetworks" >
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -8,7 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".androidSocialNetworks"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,10 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--<activity android:name="com.greenhalolabs.facebooklogin.FacebookLoginActivity" />-->
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="688084561299907"
-        />
+            android:value="@string/facebook_app_id"/>
     </application>
+    <uses-sdk
+        tools:node="merge" />
 
 </manifest>
