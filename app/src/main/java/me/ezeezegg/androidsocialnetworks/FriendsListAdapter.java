@@ -35,16 +35,19 @@ public class FriendsListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
+
         return friends.size();
     }
 
     @Override
     public Object getItem(int i) {
+
         return friends.get(i);
     }
 
     @Override
     public long getItemId(int i) {
+
         return i;
     }
 

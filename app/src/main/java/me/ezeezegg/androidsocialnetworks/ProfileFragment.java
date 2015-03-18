@@ -28,8 +28,8 @@ import com.github.gorbin.asne.twitter.TwitterSocialNetwork;
 import com.squareup.picasso.Picasso;
 
 public class ProfileFragment extends Fragment implements OnRequestSocialPersonCompleteListener {
-    private String message = "Need simple social networks integration? Check this lbrary:";
-    private String link = "https://github.com/gorbin/ASNE";
+    private String message = "Android Social Networks";
+    private String link = "https://github.com/ezegg";
 
     private static final String NETWORK_ID = "NETWORK_ID";
     private SocialNetwork socialNetwork;
@@ -91,9 +91,9 @@ public class ProfileFragment extends Fragment implements OnRequestSocialPersonCo
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_logout:
+                //Toast.makeText(getActivity(), "Logout", Toast.LENGTH_LONG).show();
                 socialNetwork.logout();
-                getActivity().getFragmentManager().popBackStack();
-                //getActivity().getSupportFragmentManager().popBackStack();
+                getActivity().getSupportFragmentManager().popBackStack();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
